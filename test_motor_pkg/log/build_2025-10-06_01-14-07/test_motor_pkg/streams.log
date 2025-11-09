@@ -1,0 +1,47 @@
+[0.051s] Invoking command in '/home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nelson/ros2_ws/install/teleop_twist_keyboard:/home/nelson/ros2_ws/install/rtabmap_python:/opt/ros/humble /usr/bin/cmake /home/nelson/ros2_ws/src/test_motor_pkg -DCMAKE_INSTALL_PREFIX=/home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg
+[0.306s] -- The C compiler identification is GNU 11.4.0
+[0.550s] -- The CXX compiler identification is GNU 11.4.0
+[0.580s] -- Detecting C compiler ABI info
+[0.883s] -- Detecting C compiler ABI info - done
+[0.909s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.910s] -- Detecting C compile features
+[0.911s] -- Detecting C compile features - done
+[0.922s] -- Detecting CXX compiler ABI info
+[1.255s] -- Detecting CXX compiler ABI info - done
+[1.280s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.281s] -- Detecting CXX compile features
+[1.283s] -- Detecting CXX compile features - done
+[1.318s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.035s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.705s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.228s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.228s] -- Configured cppcheck include dirs: 
+[3.228s] -- Configured cppcheck exclude dirs and/or files: 
+[3.251s] -- Added test 'lint_cmake' to check CMake code style
+[3.314s] -- Added test 'uncrustify' to check C / C++ code style
+[3.315s] -- Configured uncrustify additional arguments: 
+[3.324s] -- Added test 'xmllint' to check XML markup files
+[3.333s] -- Configuring done
+[3.352s] -- Generating done
+[3.360s] -- Build files have been written to: /home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg
+[3.374s] Invoked command in '/home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nelson/ros2_ws/install/teleop_twist_keyboard:/home/nelson/ros2_ws/install/rtabmap_python:/opt/ros/humble /usr/bin/cmake /home/nelson/ros2_ws/src/test_motor_pkg -DCMAKE_INSTALL_PREFIX=/home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg
+[3.382s] Invoking command in '/home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nelson/ros2_ws/install/teleop_twist_keyboard:/home/nelson/ros2_ws/install/rtabmap_python:/opt/ros/humble /usr/bin/cmake --build /home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg -- -j4 -l4
+[3.522s] Invoked command in '/home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nelson/ros2_ws/install/teleop_twist_keyboard:/home/nelson/ros2_ws/install/rtabmap_python:/opt/ros/humble /usr/bin/cmake --build /home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg -- -j4 -l4
+[3.561s] Invoking command in '/home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nelson/ros2_ws/install/teleop_twist_keyboard:/home/nelson/ros2_ws/install/rtabmap_python:/opt/ros/humble /usr/bin/cmake --install /home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg
+[3.589s] -- Install configuration: ""
+[3.589s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/ament_index/resource_index/package_run_dependencies/test_motor_pkg
+[3.592s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/ament_index/resource_index/parent_prefix_path/test_motor_pkg
+[3.593s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/environment/ament_prefix_path.sh
+[3.594s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/environment/ament_prefix_path.dsv
+[3.595s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/environment/path.sh
+[3.596s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/environment/path.dsv
+[3.597s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/local_setup.bash
+[3.599s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/local_setup.sh
+[3.600s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/local_setup.zsh
+[3.601s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/local_setup.dsv
+[3.602s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/package.dsv
+[3.603s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/ament_index/resource_index/packages/test_motor_pkg
+[3.605s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/cmake/test_motor_pkgConfig.cmake
+[3.606s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/cmake/test_motor_pkgConfig-version.cmake
+[3.607s] -- Installing: /home/nelson/ros2_ws/src/test_motor_pkg/install/test_motor_pkg/share/test_motor_pkg/package.xml
+[3.613s] Invoked command in '/home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nelson/ros2_ws/install/teleop_twist_keyboard:/home/nelson/ros2_ws/install/rtabmap_python:/opt/ros/humble /usr/bin/cmake --install /home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg

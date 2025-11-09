@@ -1,0 +1,2 @@
+Invoking command in '/home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nelson/ros2_ws/install/teleop_twist_keyboard:/opt/ros/humble /usr/bin/cmake --build /home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg -- -j4 -l4
+Invoked command in '/home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nelson/ros2_ws/install/teleop_twist_keyboard:/opt/ros/humble /usr/bin/cmake --build /home/nelson/ros2_ws/src/test_motor_pkg/build/test_motor_pkg -- -j4 -l4
