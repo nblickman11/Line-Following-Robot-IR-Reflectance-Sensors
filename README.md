@@ -1,3 +1,3 @@
 # Line-Following-Robot-With-Lidar-Sensor
 
-Download the .mov to see it live!
+Download the .MOV to see it live!
