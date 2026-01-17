@@ -1,3 +1,5 @@
-# Line-Following-Robot-With-Lidar-Sensor and PID Control
+The "test_motor_pkg" contains all code of the line following robot.  
+Download the .MOV to see the live video.
 
-Download the .MOV to see the 5 
+Next, the "algorithm_improvements" contains ROS nodes that implement the PID Control algorithm.
+Download the .mp4 to see the live video of the PID robot.
