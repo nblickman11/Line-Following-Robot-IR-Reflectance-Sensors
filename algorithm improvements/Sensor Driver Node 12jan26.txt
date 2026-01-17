@@ -1,0 +1,124 @@
+#include <rclcpp/rclcpp.hpp>
+#include <geometry_msgs/msg/twist.hpp>
+#include <gpiod.hpp>
+#include <chrono>
+
+class SensorDriverNode : public rclcpp::Node
+{
+public:
+    SensorDriverNode()
+    : Node("sensor_driver_node")
+    {
+        // GPIO setup
+        chip_ = gpiod::chip("/dev/gpiochip0");  // Change if your GPIO chip differs
+        far_left_line = chip_.get_line(14);
+        left_line_ = chip_.get_line(4);        // left sensor
+        center_line_ = chip_.get_line(3);        // left sensor
+        right_line_ = chip_.get_line(2);       // right sensor
+        far_right_line = chip_.get_line(15);
+
+        far_left_line.request({"line_follower", gpiod::line_request::DIRECTION_INPUT});
+        left_line_.request({"line_follower", gpiod::line_request::DIRECTION_INPUT});
+        center_line_.request({"line_follower", gpiod::line_request::DIRECTION_INPUT});
+        right_line_.request({"line_follower", gpiod::line_request::DIRECTION_INPUT});
+        far_right_line.request({"line_follower", gpiod::line_request::DIRECTION_INPUT});
+
+        // Publisher
+        cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+
+        // Timer
+        timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(100),
+            std::bind(&SensorDriverNode::loop, this)
+        );
+
+        RCLCPP_INFO(this->get_logger(), "Sensor Driver Node started using libgpiod");
+    }
+
+private:
+    void loop()
+    {
+        int far_left = far_left_line.get_value();
+        int left = left_line_.get_value();
+        int center = center_line_.get_value();
+        int right = right_line_.get_value();
+        int far_right = far_right_line.get_value();
+
+        // ---------- PID PARAMETERS ----------
+        double Kp = 0.3;    // strong enough to turn at slow speed
+        double Ki = 0.0;    // start OFF
+        double Kd = 0.7;   // damp oscillation
+        // ---------- PID STATE ----------
+        double prev_error = 0.0;
+        double integral = 0.0;
+        // --- Weighted average calculation ---
+        int weights[5] = {-2, -1, 0, 1, 2};
+        int sensor_vals[5] = {far_left, left, center, right, far_right};
+
+        int sum_val = 0;
+        int sum_active = 0;
+
+        for (int i = 0; i < 5; i++)
+        {
+            if (sensor_vals[i] == 1)  // black line detected
+            {
+                sum_val += weights[i];
+                sum_active += 1;
+            }
+        }
+
+        double error = 0.0;
+        if (sum_active > 0)
+            error = static_cast<double>(sum_val) / sum_active;
+
+        // Normalize error from [-2 → +2] → [-1 → +1]
+        error /= 2.0;
+
+        // ---------- PID ----------
+        integral += error;
+        integral = std::clamp(integral, -0.5, 0.5);  // anti-windup
+
+        double derivative = error - prev_error;
+
+        double output =
+        (Kp * error) +
+        (Ki * integral) +
+        (Kd * derivative);
+
+        prev_error = error;
+
+        // Clamp PID output
+        output = std::clamp(output, -1.0, 1.0);
+
+        // ---------- cmd_vel ----------
+        geometry_msgs::msg::Twist cmd;
+        cmd.linear.x  = 0.10;        // SLOW forward motion
+        cmd.angular.z = -output;    // negative = right turn
+
+        cmd_vel_pub_->publish(cmd);
+
+        // ---------- DEBUG ----------
+        RCLCPP_INFO(
+        this->get_logger(),
+        "err=%.2f P=%.2f D=%.2f out=%.2f",
+        error,
+        Kp * error,
+        Kd * derivative,
+        output);
+    }
+
+
+};
+
+int main(int argc, char * argv[])
+{
+    rclcpp::init(argc, argv);
+    rclcpp::spin(std::make_shared<SensorDriverNode>());
+    rclcpp::shutdown();
+    return 0;
+}
+
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                    
