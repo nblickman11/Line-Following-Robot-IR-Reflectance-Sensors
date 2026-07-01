@@ -12,6 +12,14 @@ https://youtube.com/shorts/FZet1UYQgno
 #### System Architecture:  
 
 #### Hardware Used:   
+Rasberry Pi, SD Card, GA12-N20 6V 1000RPM DC Gear Motor, N20 Gear Motor Wheels, Lever Wire Connectors, Li-ion Battery Pack, 1 Male to 3 Female Connectors, IR Infrared Obstacle Avoidance Sensors, Chassis, Dupont Wires, TB6612FNG Motor Driver (L298N improvement)
+<img width="619" height="645" alt="Screenshot 2026-06-30 at 11 04 30 PM" src="https://github.com/user-attachments/assets/15b330e8-3294-4622-94ae-f78123354f32" />
+<img width="500" height="211" alt="Screenshot 2026-06-30 at 11 55 17 PM" src="https://github.com/user-attachments/assets/43a1edb2-08a6-4ed2-a66a-41e452dbc56a" />
+<img width="483" height="291" alt="Screenshot 2026-06-30 at 11 55 04 PM" src="https://github.com/user-attachments/assets/886283fe-730d-4039-9019-cc7957a815fa" />
+<img width="3024" height="4032" alt="unnamed" src="https://github.com/user-attachments/assets/1246a8e5-aef4-4cb7-8207-e2a2e3d012aa" />
+<img width="159" height="68" alt="Screenshot 2026-06-30 at 11 59 52 PM" src="https://github.com/user-attachments/assets/f282cc81-cf9f-4b62-bc9f-c1877d7e9233" />
+
+
 
 #### Software Used:   
 ROS 2 – Robotics middleware for inter-node communication.  
