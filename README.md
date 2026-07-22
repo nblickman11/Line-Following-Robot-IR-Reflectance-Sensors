@@ -18,11 +18,10 @@ Rasberry Pi, SD Card, GA12-N20 6V 1000RPM DC Gear Motor, N20 Gear Motor Wheels, 
 <img width="250" height="105" alt="Screenshot 2026-06-30 at 11 55 17 PM" src="https://github.com/user-attachments/assets/43a1edb2-08a6-4ed2-a66a-41e452dbc56a" />
 <img width="241" height="145" alt="Screenshot 2026-06-30 at 11 55 04 PM" src="https://github.com/user-attachments/assets/886283fe-730d-4039-9019-cc7957a815fa" />
 <img width="375" height="500" alt="unnamed" src="https://github.com/user-attachments/assets/1246a8e5-aef4-4cb7-8207-e2a2e3d012aa" />
-<img width="159" height="68" alt="Screenshot 2026-06-30 at 11 59 52 PM" src="https://github.com/user-attachments/assets/f282cc81-cf9f-4b62-bc9f-c1877d7e9233" />
+<img width="159" height="68" alt="Screenshot 2026-06-30 at 11 59 52 PM" src="https://github.com/user-attachments/assets/f282cc81-cf9f-4b62-bc9f-c1877d7e9233" />  
 
-#### Electrical Wiring Diagram  
+#### Electrical Wiring Diagram: 
 <img width="1536" height="1024" alt="d881b684-5dcf-4291-9835-d1536ed7919b" src="https://github.com/user-attachments/assets/b83a8140-6d84-4e97-a3d2-babd48c868d9" />
-
 
 #### Software Used:   
 ROS 2 – Robotics middleware for inter-node communication.  
