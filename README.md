@@ -22,6 +22,7 @@ Rasberry Pi, SD Card, GA12-N20 6V 1000RPM DC Gear Motor, N20 Gear Motor Wheels, 
 
 <br>
 <br>
+
 #### Electrical Wiring Diagram: 
 <img width="1536" height="1024" alt="d881b684-5dcf-4291-9835-d1536ed7919b" src="https://github.com/user-attachments/assets/b83a8140-6d84-4e97-a3d2-babd48c868d9" />
 
